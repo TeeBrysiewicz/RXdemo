@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var label: UILabel!
     
+    var userFirstName: String? = String()
+    var userLastName: String? = String()
+    var userFullName: String? = String()
+    
+    
     
     // -----
     override func viewDidLoad() {
@@ -26,6 +31,14 @@ class ViewController: UIViewController {
             let textString = text as! String
             print(textString)
         }
+        
+
+        userFirstName = Model.sharedInstance.firstName
+        userLastName = Model.sharedInstance.lastName
+        userFullName = Model.sharedInstance.fullName
+        
+        
+
         
         
     }
